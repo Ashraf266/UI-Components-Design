@@ -1,0 +1,36 @@
+@use "../abstracts" as a;
+@use "sass:math";
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  // justify-content: center;
+}
+
+@for $i from 1 through 12 {
+  $w: math.div($i, 12);
+
+  .col-#{$i}-sm {
+    width: $w * 100%;
+  }
+}
+
+@media (min-width: a.$tablet-min-width) {
+  @for $i from 1 through 12 {
+    $w: math.div($i, 12);
+
+    .col-#{$i}-med {
+      width: $w * 100%;
+    }
+  }
+}
+
+@media (min-width: a.$desktop-min-width) {
+  @for $i from 1 through 12 {
+    $w: math.div($i, 12);
+
+    .col-#{$i}-lg {
+      width: $w * 100%;
+    }
+  }
+}

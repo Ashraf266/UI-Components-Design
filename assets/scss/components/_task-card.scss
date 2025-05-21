@@ -1,0 +1,93 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.task-card {
+  background-color: white;
+  @extend .p-28;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 30px 60px 0px #20385526;
+
+  > svg {
+    cursor: pointer;
+    position: absolute;
+    top: 22px;
+    right: 16px;
+  }
+
+  h2 {
+    @extend .text-large;
+    color: $deep-black;
+    @extend .mb-8;
+  }
+
+  .task-date {
+    display: flex;
+    align-items: center;
+    svg {
+      margin: 0 10px 0 6px;
+    }
+    span {
+      color: $deep-black;
+      opacity: 50%;
+      @extend .text-small-light-medium;
+    }
+  }
+
+  > p {
+    color: $deep-black;
+    opacity: 70%;
+    @extend .text-medium-small;
+    margin: 16px 0 20px;
+  }
+
+  .task-progress-text {
+    display: flex;
+    justify-content: space-between;
+    @extend .text-medium-20;
+    color: $deep-black;
+  }
+
+  .task-contributors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .contributor {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        border: 3px solid white;
+        overflow: hidden;
+        flex-shrink: none;
+      }
+
+      .contributor:nth-child(1) {
+        position: relative;
+        z-index: 999;
+      }
+
+      .contributor:nth-child(2) {
+        position: relative;
+        left: -10px;
+        z-index: 99;
+      }
+
+      .contributor:nth-child(3) {
+        position: relative;
+        left: -20px;
+        z-index: 9;
+      }
+
+      p {
+        margin-left: -16px;
+        opacity: 70%;
+        @extend .text-small-light-medium;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.task-progress {
+  background-color: white;
+  @extend .p-28;
+  border-radius: 8px;
+  box-shadow: 0px 30px 60px 0px #20385526;
+
+  h2 {
+    @extend .text-large-medium;
+    @extend .mb-22;
+  }
+
+  div {
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      h3 {
+        @extend .text-small-light-medium;
+        color: $deep-black;
+      }
+
+      span {
+        @extend .text-small-light-medium;
+        color: #{$deep-black}80;
+      }
+    }
+  }
+}

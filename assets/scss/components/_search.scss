@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+$search-color: $light-blue;
+$search-text-color: $deep-black;
+
+.search{
+    display: flex;
+    background-color: $search-color;
+    align-items: center;
+    @extend .p-inline-20;
+    border-radius: 200px;
+
+    form{
+        flex: 1 1 auto;
+        input{
+            width: 100%;
+            min-height: 36px;
+            background-color: inherit;
+            @extend .pl-25;
+            @extend .text-small-light;
+            &::placeholder{
+                color: $deep-black;
+                opacity: 50%;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}

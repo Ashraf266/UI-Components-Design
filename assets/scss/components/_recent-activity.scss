@@ -1,0 +1,44 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.recent-activity {
+  background-color: white;
+  @extend .p-28;
+  border-radius: 8px;
+  box-shadow: 0px 30px 60px 0px #20385526;
+
+  h2 {
+    @extend .text-medium-large;
+    @extend .mb-28;
+    $color: $deep-black;
+  }
+
+  > div {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 12px;
+
+    p {
+      color: #41475e;
+      @extend .text-small-light-medium;
+    }
+
+    p span {
+      @extend .text-small-semibold;
+    }
+
+    div > span {
+      color: $deep-black;
+      opacity: 50%;
+      @extend .text-small-light-medium;
+    }
+
+    .activity-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      margin-top: 3px;
+    }
+  }
+}

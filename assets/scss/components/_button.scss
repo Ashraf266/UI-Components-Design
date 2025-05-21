@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+@use "../utilities" as *;
+
+$button-normal-text-color: white;
+$button-normal-bg-color: $calm-purple;
+
+$button-loading-text-color: $calm-purple;
+$button-loading-bg-color: $light-periwinkle;
+
+$button-secondary-text-color: $calm-purple;
+$button-secondary-bg-color: transparent;
+$button-secondary-border-color: $calm-purple;
+
+$circle-color: $calm-purple;
+
+@mixin circle($w) {
+  display: inline-block;
+  height: #{$w}px;
+  width: #{$w}px;
+  border-radius: 50%;
+  background-color: $circle-color;
+  margin-right: 2.5px;
+}
+
+@for $i from 1 through 3 {
+  .circle-#{$i} {
+    @include circle(4+ (2 * (($i)-1)));
+  }
+}
+
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  @extend .mb-20;
+  @extend .text-small-medium;
+  @extend .p-block-12;
+
+  &--normal {
+    color: $button-normal-text-color;
+    background-color: $button-normal-bg-color;
+  }
+
+  &--loading {
+    color: $button-loading-text-color;
+    background-color: $button-loading-bg-color;
+
+    @extend .center-width-and-height;
+  }
+
+  &--secondary {
+    color: $button-secondary-text-color;
+    background-color: $button-secondary-bg-color;
+    border: 1px solid $button-secondary-border-color;
+  }
+}

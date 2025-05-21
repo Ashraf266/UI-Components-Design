@@ -1,0 +1,82 @@
+$spaces: (
+  "80": 80px,
+  "52": 52px,
+  "51": 51px,
+  "50": 50px,
+  "48": 48px,
+  "44": 44px,
+  "40": 40px,
+  "36": 36px,
+  "34": 34px,
+  "30": 30px,
+  "28": 28px,
+  "26": 26px,
+  "25": 25px,
+  "24": 24px,
+  "22": 22px,
+  "20": 20px,
+  "16": 16px,
+  "12": 12px,
+  "10": 10px,
+  "8": 8px,
+  "6": 6px,
+  "4": 4px,
+);
+
+@each $name, $value in $spaces {
+  .p-#{$name} {
+    padding: $value;
+  }
+
+  .pt-#{$name} {
+    padding-top: $value;
+  }
+
+  .pb-#{$name} {
+    padding-bottom: $value;
+  }
+
+  .pr-#{$name} {
+    padding-right: $value;
+  }
+
+  .pl-#{$name} {
+    padding-left: $value;
+  }
+
+  .p-inline-#{$name} {
+    padding-inline: $value;
+  }
+
+  .p-block-#{$name} {
+    padding-block: $value;
+  }
+
+  .m-#{$name} {
+    margin: $value;
+  }
+
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+
+  .mr-#{$name} {
+    margin-right: $value;
+  }
+
+  .ml-#{$name} {
+    margin-left: $value;
+  }
+
+  .m-inline-#{$name} {
+    margin-inline: $value;
+  }
+
+  .m-block-#{$name} {
+    margin-block: $value;
+  }
+}

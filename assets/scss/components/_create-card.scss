@@ -1,0 +1,91 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+$text-border-color: #7784ee;
+$element-bg: $sky-blue;
+$element-c: $ocean-blue;
+$text-color: $deep-black;
+
+.create-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 30px 60px 0px #20385526;
+  @extend .p-24;
+
+  h2 {
+    color: $deep-black;
+    @extend .mb-16;
+    @extend .text-large-medium;
+  }
+
+  form {
+    textarea {
+      min-height: 150px;
+      width: 100%;
+      resize: none;
+      border: 1px solid $text-border-color;
+      box-shadow: 0px 5px 15px 0px #7784ee4d;
+      border-radius: 8px;
+      font-family: inherit;
+      @extend .text-medium-small;
+      @extend .p-20;
+      @extend .mb-24;
+      
+
+      &::placeholder {
+        opacity: 50%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .button{
+        margin-bottom: 0;
+        margin-top: 24px;
+    }
+  }
+
+  &__element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .mb-16;
+
+    div {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+      span {
+        padding: 8px 16px;
+        border-radius: 200px;
+        background-color: #{$element-bg}33;
+        color: $element-c;
+        @extend .text-xsmall-medium;
+      }
+
+      .image-name{
+        display: flex;
+        column-gap: 12px;
+        div{
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        p{
+            @extend .text-medium-regular;
+            color: #{$deep-black}80;
+        }
+      }
+    }
+  }
+}
+
+
+
+.seperate{
+    border-bottom: 1px solid #ECECEC;
+}

@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.file-attachment {
+  background-color: white;
+  @extend .p-28;
+  box-shadow: 0px 30px 60px 0px #20385526;
+  border-radius: 8px;
+  h2 {
+    @extend .mb-30;
+    @extend .text-large-medium;
+  }
+
+  .file {
+    display: flex;
+    column-gap: 20px;
+
+    &-details {
+      flex-grow: 1;
+
+      .details-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          color: $deep-black;
+        }
+
+        p:nth-child(1) {
+          @extend .text-medium-22;
+        }
+
+        p:nth-child(2) {
+          @extend .text-small-light-22;
+        }
+
+        p:nth-child(3) {
+          @extend .text-medium-small-23;
+          opacity: 0.54;
+        }
+
+        p.download {
+          color: $calm-purple;
+          opacity: 1;
+        }
+      }
+
+      > p {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 11px;
+        letter-spacing: 0.3px;
+        opacity: 0.5;
+      }
+    }
+  }
+}

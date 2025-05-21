@@ -1,0 +1,95 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+
+.message{
+    background-color: white;
+    padding: 16px 20px;
+    border: 0.5px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 20px;
+
+    h2{
+        @extend .text-medium-semibold;
+        line-height: 20px;
+    }
+
+    p{
+        @extend .text-xsmall-light;
+    }
+
+    div:has(svg){
+        @extend .mt-4;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    &--alert{
+        background-color: #FFF8F8;
+        border-color: $coral-red;
+        h2{
+            color: $coral-red;
+        }
+
+        p{
+            color: #79170A;
+        }
+
+        div:has(svg){
+            background-color: $coral-red;
+        }
+    }
+
+    &--warning{
+        background-color: $peach-cream;
+        border-color: $golden-yellow;
+        h2{
+            color: $golden-yellow;
+        }
+
+        p{
+            color: $burnt-orange;
+        }
+
+        div:has(svg){
+            background-color: $golden-yellow;
+        }
+    }
+
+    &--success{
+        background-color: $light-teal;
+        border-color: $teal-green;
+        h2{
+            color: $teal-green;
+        }
+
+        p{
+            color: $forest-green-dark;
+        }
+
+        div:has(svg){
+            background-color: $teal-green;
+        }
+    }
+
+    &--info{
+        background-color: $light-baby-blue;
+        border-color: $sky-blue;
+        h2{
+            color: $sky-blue;
+        }
+
+        p{
+            color: $steel-blue;
+        }
+
+        div:has(svg){
+            background-color: $sky-blue;
+        }
+    }
+
+}
